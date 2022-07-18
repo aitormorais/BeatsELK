@@ -31,3 +31,12 @@ services:
       - ./conf/metricbeat/modules.d/:/usr/share/metricbeat/modules.d/
       - /var/run/docker.sock:/var/run/docker.sock
     command: metricbeat -e -system.hostfs=/hostfs -strict.perms=false
+  logstash:
+    image: logstash:7.16.3
+    hostname: "cp-logstash"
+    container_name: "cp-logstash"
+    user: root
+    volumes:
+      - "./data:/data:rw"
+      - "./conf/logstash/conf:/pipelines"
+      - "./conf/logstash/pipelines.yml:/usr/share/logstash/config/pipelines.yml"
