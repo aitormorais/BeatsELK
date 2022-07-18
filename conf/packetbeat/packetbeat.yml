@@ -1,0 +1,16 @@
+packetbeat.interfaces.device: any
+packetbeat.interfaces.snaplen: 1514
+packetbeat.interfaces.type: af_packet
+packetbeat.interfaces.buffer_size_mb: 100
+packetbeat.ignore_outgoing: false
+# Establecer el output de tipo file  https://www.elastic.co/guide/en/beats/packetbeat/current/file-output.html
+
+packetbeat.protocols:
+- type: dns
+  ports: [53]
+  include_authorities: true
+  include_additionals: true
+
+output.file:
+  path: "/data"
+  filename: packetbeaat.json
