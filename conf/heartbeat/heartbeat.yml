@@ -19,8 +19,12 @@ processors:
   - add_cloud_metadata: ~
   - add_docker_metadata: ~
 
+#output.file:
+  #path: "/data"
+  #filename: heartbeat.json
 
-#   Se deberá cambiar el output a tipo consola   https://www.elastic.co/guide/en/beats/heartbeat/current/console-output.html
-output.file:
-  path: "/data"
-  filename: heartbeat.json
+output.logstash:
+  hosts: ["cp-logstash:5044"]
+
+
+
