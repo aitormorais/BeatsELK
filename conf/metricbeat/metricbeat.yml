@@ -6,7 +6,5 @@ processors:
   - add_cloud_metadata: ~
   - add_docker_metadata: ~
 
-
-output.file:
-  path: "/data"
-  filename: metricbeat.json
+output.logstash:
+  hosts: ["cp-logstash:5045"]

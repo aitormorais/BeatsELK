@@ -8,8 +8,8 @@ services:
     volumes:
       - ./data:/data
       - ./conf/packetbeat/packetbeat.yml:/usr/share/packetbeat/packetbeat.yml
-    cap_add: ['NET_RAW', 'NET_ADMIN']
-    command: ["--strict.perms=false"]
+    cap_add: ['NET_RAW', 'NET_ADMIN'] #permisos admin dentro infrasestructura red
+    command: ["--strict.perms=false"] #saltar permisos 
     network_mode: "host"
   heartbeat:
     image: docker.elastic.co/beats/heartbeat:7.16.3

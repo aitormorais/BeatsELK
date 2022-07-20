@@ -8,5 +8,8 @@
 - pipeline.id: input-heartbeat
   path.config: "/pipelines/heartbeat"
 
-#- pipeline.id: input-python
-#  path.config: "/pipelines/python"
+- pipeline.id: input-metricbeat
+  path.config: "/pipelines/metricbeat"
+
+- pipeline.id: input-python
+  path.config: "/pipelines/python"

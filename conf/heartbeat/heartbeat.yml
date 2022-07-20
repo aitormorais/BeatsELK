@@ -9,11 +9,17 @@ heartbeat.config.monitors:
   reload.period: 5s
 
  # Comprobar estado de servicio https://www.elastic.co/es/blog/uptime-monitoring-with-heartbeat-and-the-elastic-stack
+
 heartbeat.monitors:
-- type: http
-  schedule: '@every 30s'
-  urls:
-    - https://www.backmarket.es/es-es/l/imac-qwerty-espanol/c5019c61-18f4-46f9-a052-6b989400a434#model=999%20iMac&year_date_release=79%202020
+- type: icmp
+  id: ping-myhost
+  name: My Host Ping
+  hosts: ["host.docker.internal"]
+  schedule: '*/5 * * * * * *'
+#- type: http
+ # schedule: '@every 30s'
+ # urls:
+#    - https://www.backmarket.es/es-es/l/imac-qwerty-espanol/c5019c61-18f4-46f9-a052-6b989400a434#model=999%20iMac&year_date_release=79%202020
 
 processors:
   - add_cloud_metadata: ~
