@@ -14,7 +14,8 @@ heartbeat.monitors:
 - type: icmp
   id: ping-myhost
   name: My Host Ping
-  hosts: ["host.docker.internal"]
+  hosts: [filebeat,packetbeat]
+  #hosts: ["host.docker.internal"]
   schedule: '*/5 * * * * * *'
 #- type: http
  # schedule: '@every 30s'
@@ -30,7 +31,7 @@ processors:
   #filename: heartbeat.json
 
 output.logstash:
-  hosts: ["cp-logstash:5044"]
+  hosts: ["logstash:5044"]
 
 
 
