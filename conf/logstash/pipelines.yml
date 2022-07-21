@@ -1,15 +1,13 @@
  # file is where you define your pipelines. You can define multiple.
 # For more information on multiple pipelines, see the documentation:
 #   https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.html
-#- pipeline.id: input-python
-#  path.config: "/pipelines/python"
 
+- pipeline.id: input-beats
+  path.config: "/pipelines/beats"
 
-#- pipeline.id: input-filebeat
- # path.config: "/pipelines/filebeat"
+- pipeline.id: input-filebeat
+  path.config: "/pipelines/filebeat"
 
 - pipeline.id: input-heartbeat
   path.config: "/pipelines/heartbeat"
 
-- pipeline.id: input-metricbeat
-  path.config: "/pipelines/metricbeat"

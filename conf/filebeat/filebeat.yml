@@ -1,7 +1,7 @@
 filebeat.config:
   modules:
-    path: ${path.config}/modules.d/*.yml
-    reload.enabled: false
+    path: ${path.config}/log/*.log
+    reload.enabled: true
 
 filebeat.inputs:
   - type: log
@@ -11,5 +11,5 @@ filebeat.inputs:
 
 output.logstash:
 
-  hosts: ["logstash:5047"]
+  hosts: ["logstash:5046"]
 
