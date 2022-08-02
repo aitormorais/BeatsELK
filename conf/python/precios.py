@@ -32,5 +32,6 @@ with open('./data/web.csv', 'w') as file:
        writer.writerow([k, v])
 with open('./data/web.json','w') as file:
     json.dump(dic,file, indent=2)
+    
 
 

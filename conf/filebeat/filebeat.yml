@@ -11,5 +11,5 @@ filebeat.inputs:
 
 output.logstash:
 
-  hosts: ["logstash:5046"]
+  hosts: ["logstash:5047"]
 
