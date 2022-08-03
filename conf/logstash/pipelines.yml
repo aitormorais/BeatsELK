@@ -2,8 +2,8 @@
 # For more information on multiple pipelines, see the documentation:
 #   https://www.elastic.co/guide/en/logstash/current/multiple-pipelines.html
 
-- pipeline.id: input-beats
-  path.config: "/pipelines/beats"
+#- pipeline.id: input-beats
+ # path.config: "/pipelines/beats"
 
 - pipeline.id: input-filebeat
   path.config: "/pipelines/filebeat"
