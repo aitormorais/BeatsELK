@@ -11,18 +11,6 @@
 - pipeline.id: input-heartbeat
   path.config: "/pipelines/heartbeat"
 
-- pipeline.id: http-endpoint1-processor
-  path.config: "/pipelines/http-endpoint1"
-  queue.type : persisted
-
-- pipeline.id: http-endpoint2-processor
-  path.config: "/pipelines/http-endpoint2"
-  queue.type : persisted
-  
-- pipeline.id: http-endpoint3-processor
-  path.config: "/pipelines/http-endpoint3"
-  queue.type : persisted
-
 
 
 
