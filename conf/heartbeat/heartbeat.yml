@@ -14,7 +14,7 @@ heartbeat.monitors:
 - type: icmp
   id: ping-myhost
   name: My Host Ping
-  hosts: [172.18.0.5]
+  hosts: [host.docker.internal]
   #hosts: ["host.docker.internal"]
   schedule: '*/5 * * * * * *'
 #- type: http

@@ -7,10 +7,19 @@
 
 - pipeline.id: input-filebeat
   path.config: "/pipelines/filebeat"
+  queue.type : persisted
 
 - pipeline.id: input-heartbeat
   path.config: "/pipelines/heartbeat"
+  queue.type : persisted
 
+- pipeline.id: msgA-processor
+  path.config: "/pipelines/msgA"
+  queue.type : persisted
+
+- pipeline.id: msgD-processor
+  path.config: "/pipelines/msgD"
+  queue.type : persisted
 
 
 
